@@ -18,7 +18,7 @@ Data: movies_metadata.csv and ratings.csv from [Kaggle](https://www.kaggle.com/r
 
 ### Writing an ETL Function to Read Three Data Files
 
-To begin, I wrote a function that takes three arguments. It loads in the two .csv files (movies_metadata.csv and ratings.csv) and the JSON file (wikipedia-movies.json) and turns them all into data frames (kaggle_metadata, ratings, and wiki_movies_df).
+I started in [ETL_function_test.ipynb](https://github.com/perryabdulkadir/Movies-ETL/blob/main/ETL_function_test.ipynb), writing a function that takes three arguments. It loads in the two .csv files (movies_metadata.csv and ratings.csv) and the JSON file (wikipedia-movies.json) and turns them all into data frames (kaggle_metadata, ratings, and wiki_movies_df).
 
 ```
 def extract_transform_load(wikidata, ratings, movielens):
