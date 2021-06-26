@@ -7,8 +7,42 @@ Please note: I tried to upload the .csv files to the resources folder, but even 
 
 ## Tools
 
-Software: Jupyter Notebook, Python
+Software: Jupyter Notebook, Python, PostgreSQL, SQL, 
 
-Python packages: json, pandas, numpy, re, sqlalchemy
+Python packages: json, pandas, numpy, re, sqlalchemy, time
 
 Data: movies_metadata.csv and ratings.csv from [Kaggle](https://www.kaggle.com/rounakbanik/the-movies-dataset?select=ratings.csv), [wikipedia-movies.json](https://github.com/perryabdulkadir/Movies-ETL/blob/main/Resources/wikipedia-movies.json)
+
+
+## Analysis
+
+### Writing an ETL Function to Read Three Data Files
+
+To begin, I wrote a function that takes three arguments. It loads in the two .csv files (movies_metadata.csv and ratings.csv) and the JSON file (wikipedia-movies.json) and turns them all into data frames (kaggle_metadata, ratings, and wiki_movies_df).
+
+```
+def extract_transform_load(wikidata, ratings, movielens):
+    # 2. Read in the kaggle metadata and MovieLens ratings CSV files as Pandas DataFrames.
+    kaggle_metadata = pd.read_csv(movielens)
+    ratings = pd.read_csv(ratings)
+
+    # 3. Open the read the Wikipedia data JSON file.
+    with open(wikidata, mode='r') as file:
+        wiki_movies_raw = json.load(file)
+    # 4. Read in the raw wiki movie data as a Pandas DataFrame.
+    wiki_movies_df =  pd.DataFrame(wiki_movies_raw)
+    # 5. Return the three DataFrames
+    return wiki_movies_df, kaggle_metadata, ratings
+   ```
+   
+  I made variables representing file directories for each of the data sources. 
+  
+  ```
+  file_dir = 'C:/Users/Perry/Movies-ETL' 
+# Wikipedia data
+wiki_file = f'{file_dir}/wikipedia-movies.json'
+# Kaggle metadata
+kaggle_file = f'{file_dir}/movies_metadata.csv'
+# MovieLens rating data.
+ratings_file = f'{file_dir}/ratings.csv'
+```
