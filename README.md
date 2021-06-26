@@ -85,5 +85,10 @@ Next, a try-except block iterates through the wiki_movies_df column imdb_link us
 
 ![etl_function_2](Resources/etl_function_2.PNG)
 
+The next portion of code passes the Box office column of wiki_movies_df through the parse_dollars function. It also applies the parse_dollars function to the Budget column after a few regex expressions to change the format of Budget column entries.
 
+![etl_function_3](Resources/etl_function_3.PNG)
 
+The last portion of this code block cleans the release date column by applying regex expression to regularize four common forms of dates, then uses the Pandas to_datetime function to change the data type to datetime. More regex and lambda expressions are used to standardize the running time column.
+
+![etl_function_4](Resources/etl_function_4.PNG)
