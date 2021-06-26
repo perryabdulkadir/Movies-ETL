@@ -77,5 +77,9 @@ The clean_movie function takes the argument 'movie' and combines alternate title
 
 ![clean_movie_function](Resources/clean_movie_function.PNG)
 
-I then began constructing a large function, also called extract_transform_load, that takes in the arguments wikidata, ratings, and movielens.
+I then began constructing a large function, also called extract_transform_load, that takes in the arguments wikidata, ratings, and movielens. The first section of the function reads in the JSON and CSV files as data frames. A list comprehension removes TV shows from the Wikipedia data by removing entries that have 'No. of episodes' in them. Another list comprehension iterates through the wiki_movies list and applies the clean_movie function to each movie. Then, the resulting clean_movies list is turned into a data frame, wiki_movies_df. 
 
+
+
+
+![etl_function_1](Resources/etl_function_1.PNG)
