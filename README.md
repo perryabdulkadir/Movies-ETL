@@ -59,3 +59,22 @@ wiki_movies_df = wiki_file
 kaggle_metadata = kaggle_file
 ratings = ratings_file
 ```
+I checked each data frame to verify it had been properly populated. 
+
+* **wiki_movies_df**
+![wiki_movies_df](Resources/wiki_movies_df.PNG)
+
+* **kaggle_metadata_df**
+![kaggle_metadata_df](Resources/election_results_printout.PNG)
+
+* **ratings**
+![ratings_df](Resources/ratings_df.PNG)
+
+## Extracting and Transforming the Wikipedia Data
+Unfortunately, due to numerous issues of inconsistent formatting, it was necessary to clean and transform the Wikipedia data before I could proceed with analysis. 
+
+The clean_movie function takes the argument 'movie' and combines alternate titles into one list, then combines synonymous words and phrases (e.g. 'Directed by' and 'Director'). 
+
+![clean_movie_function](Resources/clean_movie_function.PNG)
+
+
