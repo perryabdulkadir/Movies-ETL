@@ -108,3 +108,17 @@ movies_with_ratings_df was successfully populated.
 
 ![movies_with_ratings_df](Resources/movies_with_ratings_df.PNG)
 
+### Creating the Movie Database
+
+The final step of the project was to add the movies_df and MovieLens rating CSV to a SQL database. The notebook [ETL_create_database.ipynb contains the code](https://github.com/perryabdulkadir/Movies-ETL/blob/main/ETL_create_database.ipynb) to do this. 
+
+![sql_import](Resources/sql_import.PNG)
+
+The data was successfully imported into SQL. A query returned a count of 6075 in the movies table:
+
+![movies_query](Resources/movies_query.PNG)
+
+Another query returned a count of 26024289 in the movies table:
+
+![ratings_query](Resources/ratings_query.PNG)
+
