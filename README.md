@@ -46,3 +46,16 @@ kaggle_file = f'{file_dir}/movies_metadata.csv'
 # MovieLens rating data.
 ratings_file = f'{file_dir}/ratings.csv'
 ```
+
+Then, I set the file directory variables equal to the extract_transform_load function. 
+
+```
+wiki_file, kaggle_file, ratings_file = extract_transform_load(wiki_file, ratings_file, kaggle_file)
+```
+Next, I set the data fames equal to the file variables. 
+
+```
+wiki_movies_df = wiki_file
+kaggle_metadata = kaggle_file
+ratings = ratings_file
+```
