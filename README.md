@@ -8,5 +8,7 @@ Please note: I tried to upload the .csv files to the resources folder, but even 
 ## Tools
 
 Software: Jupyter Notebook, Python
+
 Python packages: json, pandas, numpy, re, sqlalchemy
+
 Data: movies_metadata.csv and ratings.csv from [Kaggle](https://www.kaggle.com/rounakbanik/the-movies-dataset?select=ratings.csv), [wikipedia-movies.json](https://github.com/perryabdulkadir/Movies-ETL/blob/main/Resources/wikipedia-movies.json)
