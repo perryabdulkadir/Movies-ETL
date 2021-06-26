@@ -71,10 +71,11 @@ I checked each data frame to verify it had been properly populated.
 ![ratings_df](Resources/ratings_df.PNG)
 
 ## Extracting and Transforming the Wikipedia Data
-Unfortunately, due to numerous issues of inconsistent formatting, it was necessary to clean and transform the Wikipedia data before I could proceed with analysis. 
+Unfortunately, due to numerous issues of inconsistent formatting, it was necessary to clean and transform the Wikipedia data before I could proceed with analysis. I began coding in a new notebook, [ETL_clean_wiki_movies.ipynb](https://github.com/perryabdulkadir/Movies-ETL/blob/main/ETL_clean_wiki_movies.ipynb).
 
 The clean_movie function takes the argument 'movie' and combines alternate titles into one list, then combines synonymous words and phrases (e.g. 'Directed by' and 'Director'). 
 
 ![clean_movie_function](Resources/clean_movie_function.PNG)
 
+I then began constructing a large function, also called extract_transform_load, that takes in the arguments wikidata, ratings, and movielens.
 
