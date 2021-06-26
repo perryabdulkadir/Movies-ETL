@@ -104,3 +104,7 @@ Luckily, the transformation required for the Kaggle dataset was similar to the t
 
 ![kaggle_etl](Resources/kaggle_etl.PNG)
 
+movies_with_ratings_df was successfully populated. 
+
+![movies_with_ratings_df](Resources/movies_with_ratings_df.PNG)
+
