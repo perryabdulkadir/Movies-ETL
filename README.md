@@ -77,9 +77,13 @@ The clean_movie function takes the argument 'movie' and combines alternate title
 
 ![clean_movie_function](Resources/clean_movie_function.PNG)
 
-I then began constructing a large function, also called extract_transform_load, that takes in the arguments wikidata, ratings, and movielens. The first section of the function reads in the JSON and CSV files as data frames. A list comprehension removes TV shows from the Wikipedia data by removing entries that have 'No. of episodes' in them. Another list comprehension iterates through the wiki_movies list and applies the clean_movie function to each movie. Then, the resulting clean_movies list is turned into a data frame, wiki_movies_df. 
-
-
-
+I then began constructing a function, also called extract_transform_load, that takes in the arguments wikidata, ratings, and movielens. The first section of the function reads in the JSON and CSV files as data frames. A list comprehension removes TV shows from the Wikipedia data by removing entries that have 'No. of episodes' in them. Another list comprehension iterates through the wiki_movies list and applies the clean_movie function to each movie. Then, the resulting clean_movies list is turned into a data frame, wiki_movies_df. 
 
 ![etl_function_1](Resources/etl_function_1.PNG)
+
+Next, a try-except block iterates through the wiki_movies_df column imdb_link using a regex expression to extract the IMDB ID from the link. These IMDB IDs are then added as their own cloumn to wiki_movies_df. If the regex expression fails, the line that threw the error is printed. The next section of code specifies that columns should be dropped if more than 10% of rows contain null values. A new variable, box_office, is then created to hold non-null values from the Box office column. In order to properly use regular expressions to clean the box office numbers, lambda and join functions are used to convert the box office data to string values. Regex expressions are then used to create separate lists for the two different kinds of box office number formats: form_one and form_two. The parse_dollars function then takes each box office string and converts it to float. If it cannot parse the string, it returns null.
+
+![etl_function_2](Resources/etl_function_2.PNG)
+
+
+
