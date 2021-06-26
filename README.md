@@ -97,3 +97,10 @@ The same method of setting data file directory variables equal to the ETL functi
 
 
 ![wiki_movies_df_clean](Resources/wiki_movies_df_clean.PNG)
+
+### Extracting and Transforming the Kaggle Data
+
+Luckily, the transformation required for the Kaggle dataset was similar to the transformation of the Wikipedia dataset, so simply refactoring the previous code accomplished most of the necessary transformation. I reused/refactored the clean_movie, change_column_name, extract_transform_load, and parse_dollars function. However, some new code had to be written. Various things were done to clean the Kaggle data, such as setting the budget column to be an integer datatype. Next, the wiki_movies_df and kaggle_metada were merged into one data frame, movies_df. Several irrelevant columns were dropped from this new frame. After that, the function fill_missing_kaggle_data was written using a lambda expression to fill null values in the Kaggle data with '0' where appropriate. Then, a loc filter was applied to retain only relevant remaining columns, and the columns were renamed to be more descriptive and consistent. Finally, the movies_with_ratings_df was created by merging rating_counts and movies_df.
+
+![kaggle_etl](Resources/kaggle_etl.PNG)
+
