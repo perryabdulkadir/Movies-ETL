@@ -92,3 +92,8 @@ The next portion of code passes the Box office column of wiki_movies_df through 
 The last portion of this code block cleans the release date column by applying regex expression to regularize four common forms of dates, then uses the Pandas to_datetime function to change the data type to datetime. More regex and lambda expressions are used to standardize the running time column.
 
 ![etl_function_4](Resources/etl_function_4.PNG)
+
+The same method of setting data file directory variables equal to the ETL function is used from the 'Writing an ETL Function to Read Three Data Files' section. Checking the cleaned wiki_movies_df confirms that the cleaning was successful. 
+
+
+![wiki_movies_df_clean](Resources/wiki_movies_df_clean.PNG)
