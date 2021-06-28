@@ -122,3 +122,14 @@ Another query returned a count of 26024289 in the movies table:
 
 ![ratings_query](Resources/ratings_query.PNG)
 
+## Summary
+I successfully created a PostgreSQL database of movie information after extracting data from three disparate sources, then cleaning and transforming it.
+
+
+
+### **Contact:**
+
+**Email:** perry.abdulkadir@alumni.harvard.edu
+
+**Linkedin:** https://www.linkedin.com/in/perry-abdulkadir-6a255199/
+
