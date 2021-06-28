@@ -61,12 +61,15 @@ ratings = ratings_file
 I checked each data frame to verify it had been properly populated. 
 
 * **wiki_movies_df**
+
 ![wiki_movies_df](Resources/wiki_movies_df.PNG)
 
 * **kaggle_metadata_df**
-![kaggle_metadata_df](Resources/election_results_printout.PNG)
+
+![kaggle_metadata_df](Resources/kaggle_metadata_df.PNG)
 
 * **ratings**
+
 ![ratings_df](Resources/ratings_df.PNG)
 
 ## Extracting and Transforming the Wikipedia Data
